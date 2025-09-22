@@ -1,0 +1,58 @@
+    <html>
+        <head>
+            <title>0922-css簡介</title>
+<style>/*css註解*/
+/*css語法:
+選擇器(selector){}
+屬性:設定;
+屬性:設定;
+屬性:設定;
+}
+*//*選擇器 selector:
+tag(html標籤) 例 div
+#id         例 #d1 #d2 
+.class       例.c1  .c2
+*/
+div{
+   width:200px;
+  height:100px;
+   color:blue;
+    background:hsl(0,53%,43%);
+    display:inline-block;
+  }
+
+.c1{
+background: pink;
+}
+.c2{
+background:lightcyan;
+
+}
+/*css的顏色用法
+1.英文名稱
+2.rgb(r 0~255,g 0~255,b 0~255)
+3.hsl(色相0~360,彩度0~100%,亮度0~100%)
+4.rgba(r,g,b,a 可見度0~1)
+5.hsla(h,s,l,a)
+6.#色碼(#rrggbb)
+*/
+
+
+
+</style>
+
+        </head>
+  <body>
+   <!--id:必一無二 需字母開頭
+   class:類別 需字母開頭 可共用 可多重 用空白間隔
+  -->
+   
+   
+    <div id="d1"class="c1"></div>
+ <div id="d2"class="c2"></div>
+<div id="d3"class="c1"></div>
+<div id="d4"class="c1c2"></div>
+
+
+  </body>
+    </html>
