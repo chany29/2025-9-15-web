@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; margin-top:100px;">
+
+  <h1>30 秒點擊</h1>
+    <p>分數：<span id="score">0</span></p>
+      <p>時間：<span id="time">30</span></p>
+        <button id="btn">點我</button>
+
+          <script>
+              let score = 0;
+                  let time = 30;
+                      let timer;
+
+                          btn.onclick = () => {
+                                if (!timer) start();
+                                      if (time > 0) scoreEl.textContent = ++score;
+                                          };
+
+                                              function start() {
+                                                    timer = setInterval(() => {
+                                                            timeEl.textContent = --time;
+                                                                    if (time === 0) {
+                                                                              clearInterval(timer);
+                                                                                        btn.disabled = true;
+                                                                                                  alert("分數：" + score);
+                                                                                                          }
+                                                                                                                }, 1000);
+                                                                                                                    }
+
+                                                                                                                        const btn = document.getElementById("btn");
+                                                                                                                            const scoreEl = document.getElementById("score");
+                                                                                                                                const timeEl = document.getElementById("time");
+                                                                                                                                  </script>
+
+                                                                                                                                  </body>
+                                                                                                                                  </html>
