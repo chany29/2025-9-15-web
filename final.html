@@ -11,20 +11,8 @@
             let score=0;/*顯示分數*//*let宣告變數*/
             let time=30;
             let timer;/*計時器
-/*btn是按鈕的意思*/btn.onclick=()=>{/*onclick被點擊*/
-           if(!timer)start();/*!timer timer還不存在*/
-           if(time>0)scoreEl.textContent= ++score;/*時間沒到0 分數加1*///*scoreEl分數顯示的地方  timeEl時間顯示的地方*/
-            };
-            function start(){
-                timer=setInterval(()=>{/*setInterval每隔一段時間執行*/
-                timeEl.textContent=--time;/*textContent更新畫面*/
-                if(time===0){
-                    clearInterval(timer);/*停止計時器*/
-                    btn.disabled=true;/*按鈕不能再按*/
-                    alert("分數:"+score);/*跳出視窗顯示分數*/
-                }
-                }, 1000);/*每1000毫秒(1秒)跑一次*/
-            }
+
+            
           const btn=/*const不會變的變數*/
           document.getElementById("btn");/*document整個網頁*//*getElementById用id抓元素*/
           const scoreEl=
@@ -32,7 +20,29 @@
           const timeEl=
           document.getElementById("time");
 
+/*btn是按鈕的意思*/btn.onclick=()=>{/*onclick被點擊*/
+           if(!timer)start();/*!timer timer還不存在*/
+           if(time>0)scoreEl.textContent= ++score;/*時間沒到0 分數加1*///*scoreEl分數顯示的地方  timeEl時間顯示的地方*/
+            };
+
+
+function start(){
+                timer=setInterval(()=>{/*setInterval每隔一段時間執行*/
+                timeEl.textContent= --time;/*textContent更新畫面*/
+                if(time===0){
+                    clearInterval(timer);/*停止計時器*/
+                    btn.disabled=true;/*按鈕不能再按*/
+                    alert("分數:"+score);/*跳出視窗顯示分數*/
+                }
+                }, 1000);/*每1000毫秒(1秒)跑一次*/
+            }
+
+
+
+
+
+
+
         </script>
     </body>
 </html>
-
